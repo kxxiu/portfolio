@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIU-PORTFOLIO</title>
+
+  <!-- 초기화 -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- 스와이퍼 슬라이드 -->
+  <link rel="stylesheet" href="./css/swiper.css" type="text/css">
+  <!-- 기본서식 -->
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+  <!-- 메인서식 -->
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+
+  <!-- 프리픽스 프리 -->
+  <script src="./script/prefixfree.min.js"></script>
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="./script/jquery-3.7.0.js"></script>
+  <!-- 제이쿼리 ui 라이브러리 -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <!-- 스와이퍼 슬라이드 -->
+  <script src="./script/swiper.js"></script>
+  <!-- 레이아웃 스크립트 서식 -->
+  <script src="./script/layout.js"></script>
+  <!-- 메인 스크립트 서식 -->
+  <script src="./script/main.js"></script>
+</head>
+
+<body>
+  <!-- 헤더 -->
+  <header>
+    <h1>
+      <a href="index.html" title="메인페이지 바로가기">
+        <img src="./images/logo_white.png" alt="XIU">
+      </a>
+    </h1>
+  </header>
+
+  <!-- 내비게이션 -->
+  <nav>
+    <ul class="gnb">
+      <li><span>&nbsp;</span><a href="#profile">PROFILE</a></li>
+      <li><span>&nbsp;</span><a href="#chapter">PUBLISHING</a></li>
+      <li><span>&nbsp;</span><a href="#design">UI/UX DESIGN</a></li>
+      <li><span>&nbsp;</span><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- 메인 -->
+  <main>
+    <!-- 인트로 -->
+    <section id="intro">
+      <h2 class="hidden">인트로</h2>
+      <!-- 로딩 페이지 -->
+      <article class="load_page">
+        <h2>HELLO!</h2>
+        <h3>I<span class="dot">’</span>M</h3>
+        <h4>SIWOO</h4>
+        <h5>MY WORK</h5>
+        <div>
+          <h5>LET’S</h5>
+          <h6>GET START!</h6>
+        </div>
+      </article>
+
+      <!-- 인트로 페이지 -->
+      <article class="intro_page">
+        <h2>PORTFOLIO</h2>
+        <p>
+          HELLO!<br>
+          I WANT TO BE<br>
+          PASSIONATE &amp; CREATIVE<br>
+          WEB PUBLISHER
+        </p>
+        <div class="scroll">
+          <img src="./images/intro_arrow.png" alt="화살표">
+          <span>SCROLL</span>
+        </div>
+        <div class="circle1">&nbsp;</div>
+        <div class="circle2">&nbsp;</div>
+        <div class="circle3">&nbsp;</div>
+      </article>
+    </section>
+
+    <!-- 프로필 -->
+    <section id="profile">
+      <h2 class="hidden">프로필</h2>
+      <div class="layout">
+        <div class="img_box"><img src="./images/siu.png" alt="프로필 이미지"></div>
+        <div class="pro_txt">
+          <h3>사람들과 둥글게 어울리고<br>통통 튀는 결과물을 만들어 내는 신입 웹퍼블리셔입니다.</h3>
+          <p>
+            안녕하세요 :)<br>
+            동그라미 같은 신입 웹퍼블리셔 김시우입니다.<br>
+            동그라미의 상징처럼 <span class="underline under1">창조적인 방향</span>으로 <span class="underline under2">팀원들과 화합</span>하여 좋은 결과물을 만들어 내도록 하겠습니다.<br>
+            현재에 안주하지 않는, 열정을 갖고 발전해 나가는 웹퍼블리셔가 되겠습니다.
+          </p>
+          <ul>
+            <!-- 프로필 -->
+            <li>
+              <span>PROFILE</span>
+              <ul class="info">
+                <li>이름 : 김시우</li>
+                <li>생년월일 : 1995년 4월 27일</li>
+                <li>주소 : 경기도 고양시 일산서구</li>
+                <li>연락처 : 010-8670-8873</li>
+                <li>이메일 : kxxiu27@gmail.com</li>
+              </ul>
+            </li>
+            <!-- 성격 -->
+            <li>
+              <span>CHARACTER</span>
+              <ul class="words">
+                <li>열정</li>
+                <li>책임감</li>
+                <li>친절</li>
+                <li>배려</li>
+                <li>성실</li>
+                <li>창의력</li>
+              </ul>
+            </li>
+            <!-- 자격증 -->
+            <li>
+              <span>CERTIFICATE</span>
+              <ul class="cert">
+                <li>GTQ 포토샵</li>
+                <li>웹디자인 기능사</li>
+              </ul>
+            </li>
+            <!-- 기술 -->
+            <li>
+              <span>SKILLS</span>
+              <ul class="progress">
+                <li class="contain">
+                  <div class="gage html">
+                    <div class="gage_num"></div>
+                  </div>
+                  <span>HTML</span>
+                </li>
+
+                <li class="contain">
+                  <div class="gage css">
+                    <div class="gage_num">90</div>
+                  </div>
+                  <span>CSS</span>
+                </li>
+
+                <li class="contain">
+                  <div class="gage js">
+                    <div class="gage_num"></div>
+                  </div>
+                  <span>JAVASCRIPT</span>
+                </li>
+
+                <li class="contain">
+                  <div class="gage jq">
+                    <div class="gage_num"></div>
+                  </div>
+                  <span>JQUERY</span>
+                </li>
+
+                <li class="contain">
+                  <div class="gage ps">
+                    <div class="gage_num"></div>
+                  </div>
+                  <span>PHOTOSHOP</span>
+                </li>
+
+                <li class="contain">
+                  <div class="gage ai">
+                    <div class="gage_num"></div>
+                  </div>
+                  <span>ILLUSTRATOR</span>
+                </li>
+
+                <li class="contain">
+                  <div class="gage fig">
+                    <div class="gage_num"></div>
+                  </div>
+                  <span>FIGMA</span>
+                </li>
+
+                <li class="contain">
+                  <div class="gage plan">
+                    <div class="gage_num"></div>
+                  </div>
+                  <span>PROJECT PLAN</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 퍼블리싱 목록 -->
+    <section id="chapter">
+      <h2 class="hidden">퍼블리싱 목차</h2>
+      <div class="layout">
+        <h3><span>01</span><br>PUBLISHING</h3>
+        <p>작업물을 전체적으로 보시려면 스크롤을 내려주시고<br>해당 작품으로 바로 가시려면 아래 목록을 클릭해 주시길 바랍니다.</p>
+        <ul>
+          <li>
+            <a href="#p01">
+              <h4>블랙핑크</h4>
+              <span>Scroll<br>Onepage</span>
+            </a>
+          </li>
+          <li>
+            <a href="#p02">
+              <h4>시장하시죠</h4>
+              <span>Adaptive<br>Web</span>
+            </a>
+          </li>
+          <li>
+            <a href="#p03">
+              <h4>죠스떡볶이</h4>
+              <span>Responsive<br>Web</span>
+            </a>
+          </li>
+          <li>
+            <a href="#p04">
+              <h4>현대 캐스퍼</h4>
+              <span>Clone<br>Coding</span>
+            </a>
+          </li>
+          <li>
+            <a href="#p05">
+              <h4>하림펫푸드</h4>
+              <span>Clone<br>Coding</span>
+            </a>
+          </li>
+          <li>
+            <a href="#p06">
+              <h4>동물병원</h4>
+              <span>Clone<br>Coding</span>
+            </a>
+          </li>        
+        </ul>
+      </div>
+    </section>
+
+    <!-- 퍼블리싱 -->
+    <section id="publish">
+      <h2 class="hidden">퍼블리싱</h2>
+      <div class="pub_wrap layout">
+        
+        <!-- 블랙핑크 -->
+        <article id="p01">
+          <h2 class="hidden">퍼블리싱 1</h2>
+          <!-- 상단 설명-->
+          <div class="pub_desc">
+            <div class="pub_title">
+              <h3>블랙핑크</h3>
+              <h4>Scroll Onepage</h4>
+              <span>2023.07.31 ~ 2023.08.16</span>
+              <p>
+                블랙핑크는 YG엔터테인먼트에 소속된<br>
+                세계적으로 주목 받고 있는 KPOP 걸그룹입니다.<br>
+                팬들을 위한 공식 홈페이지로<br>
+                블랙핑크의 이미지와 어울리게 재구성하였습니다. 
+              </p>
+            </div>
+            <ul>
+              <li>
+                <h5>PART</h5>
+                <p>개인 포트폴리오</p>
+              </li>
+              <li>
+                <h5>CONTRIBUTION</h5>
+                <p>기획, 디자인, 구현 100%</p>
+              </li>
+              <li>
+                <h5>CONCEPT</h5>
+                <p>세련된, 감각적인, 우아한</p>
+              </li>
+              <li>
+                <h5>COLOR</h5>
+                <ul>
+                  <li class="color1"><span>&nbsp;</span> MAIN #EE99AC</li>
+                  <li class="color2"><span>&nbsp;</span> POINT #FFFFFF</li>
+                  <li class="color3"><span>&nbsp;</span> BG #171717</li>
+                </ul>
+              </li>
+              <li>
+                <h5>USED TOOL</h5>
+                <ul class="tool">
+                  <li><img src="./images/ps.png" alt="포토샵">사진 보정</li>
+                  <li><img src="./images/figma.png" alt="피그마">디자인 시안</li>
+                  <li><img src="./images/ai.png" alt="일러스트">로고 수정</li>
+                  <li><img src="./images/vscode.png" alt="vs코드">웹 제작</li>
+                  <li>HTML, CSS,<br> JAVASCRIPT, JQUERY</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- 하단 작품 -->
+          <div class="pub_work">
+            <div class="link_btn">
+              <a href="">WEB VIEW</a>
+              <a href="">FIGMA VIEW</a>
+            </div>
+            <div class="pub1_wrap">
+              <img src="./images/pc.png" alt="pc화면">
+              <div class="swiper pub1">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide"><a href=""><img src="images/pub1_intro.jpg" alt="블랙핑크 인트로"></a></li>
+                  <li class="swiper-slide"><a href=""><img src="images/pub1_about.jpg" alt="블랙핑크 어바웃"></a></li>
+                  <li class="swiper-slide"><a href=""><img src="images/pub1_profile.jpg" alt="블랙핑크 프로필"></a></li>
+                  <li class="swiper-slide"><a href=""><img src="images/pub1_activities.jpg" alt="블랙핑크 활동"></a></li>
+                  <li class="swiper-slide"><a href=""><img src="images/pub1_album.jpg" alt="블랙핑크 앨범"></a></li>
+                  <li class="swiper-slide"><a href=""><img src="images/pub1_gallery.jpg" alt="블랙핑크 갤러리"></a></li>
+                  <li class="swiper-slide"><a href=""><img src="images/pub1_news.jpg" alt="블랙핑크 뉴스"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="slide_arrow">Slide <img src="./images/arrow_left.png" alt=""></div>
+            <span class="page_num">01</span>
+            <div class="work_bg">&nbsp;</div>
+          </div>
+          <div class="blind b1"></div>
+        </article>
+
+        <!-- 시장하시죠 -->
+        <article id="p02">
+          <h2 class="hidden">퍼블리싱 2</h2>
+          <!-- 상단 설명-->
+          <div class="pub_desc">
+            <div class="pub_title">
+              <h3>시장하시죠</h3>
+              <h4>Adaptive Web</h4>
+              <span>2023.06.24 ~ 2023.07.25</span>
+              <p>
+                전통시장에 대한 수요가 늘어남에 따라<br>
+                소비자들에게 지역별 시장 정보를 제공하고<br>
+                온라인에서 시장 제품을 구매할 수 있도록<br>
+                웹사이트를 기획하였습니다.
+              </p>
+            </div>
+            <ul>
+              <li>
+                <h5>PART</h5>
+                <p>모바일 페이지 담당</p>
+              </li>
+              <li>
+                <h5>CONTRIBUTION</h5>
+                <p>모바일 기획, 디자인, 구현</p>
+                <p>로고 제작</p>
+              </li>
+              <li>
+                <h5>CONCEPT</h5>
+                <p>포근한, 친근한, 자연적인</p>
+              </li>
+              <li>
+                <h5>COLOR</h5>
+                <ul>
+                  <li class="color1"><span>&nbsp;</span> MAIN #D4E8E6</li>
+                  <li class="color2"><span>&nbsp;</span> POINT #492B23</li>
+                  <li class="color3"><span>&nbsp;</span> BG #FEF9F3</li>
+                </ul>
+              </li>
+              <li>
+                <h5>USED TOOL</h5>
+                <ul class="tool">
+                  <li><img src="./images/ps.png" alt="포토샵">사진 보정</li>
+                  <li><img src="./images/figma.png" alt="피그마">디자인 시안</li>
+                  <li><img src="./images/ai.png" alt="일러스트">로고 제작</li>
+                  <li><img src="./images/vscode.png" alt="vs코드">웹 제작</li>
+                  <li>HTML, CSS,<br> JAVASCRIPT, JQUERY</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- 하단 작품 -->
+          <div class="pub_work">
+            <div class="link_btn">
+              <a href="">WEB VIEW</a>
+              <a href="">FIGMA VIEW</a>
+            </div>
+            <div class="pub2_wrap">
+              <img src="./images/mobile.png" alt="모바일 화면">
+              <div class="swiper pub2">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide"><a href=""><img src="images/pub2_intro.jpg" alt="시장하시죠 인트로"></a></li>
+                  <li class="swiper-slide"><a href=""><img src="images/pub2_search.jpg" alt="시장하시죠 시장정보"></a></li>
+                  <li class="swiper-slide"><a href=""><img src="images/pub2_guide.jpg" alt="시장하시죠 추천가이드"></a></li>
+                  <li class="swiper-slide"><a href=""><img src="images/pub2_shop.jpg" alt="시장하시죠 동네상점"></a></li>
+                  <li class="swiper-slide"><a href=""><img src="images/pub2_event.jpg" alt="시장하시죠 이벤트"></a></li>
+                  <li class="swiper-slide"><a href=""><img src="images/pub2_sns.jpg" alt="시장하시죠 sns"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="slide_arrow">Slide <img src="./images/arrow_left.png" alt=""></div>
+            <span class="page_num">02</span>
+            <div class="work_bg">&nbsp;</div>
+          </div>
+          <div class="blind b2"></div>
+        </article>
+
+        <!-- 죠스떡볶이 -->
+        <article id="p03">
+          <h2 class="hidden">퍼블리싱 3</h2>
+          <!-- 상단 설명-->
+          <div class="pub_desc">
+            <div class="pub_title">
+              <h3>죠스떡볶이</h3>
+              <h4>Responsive Web</h4>
+              <span>2023.06.09 ~ 2023.06.26</span>
+              <p>
+                국내 떡볶이 프랜차이즈 중 하나인 죠스 떡볶이<br>
+                회사의 철학인 즐거움을 담은 사이트를 재구성하여<br>
+                반응형 웹페이지로 제작하였습니다.
+              </p>
+            </div>
+            <ul>
+              <li>
+                <h5>PART</h5>
+                <p>개인 포트폴리오</p>
+              </li>
+              <li>
+                <h5>CONTRIBUTION</h5>
+                <p>기획, 디자인, 구현 100%</p>
+              </li>
+              <li>
+                <h5>CONCEPT</h5>
+                <p>달콤한, 즐거운, 강렬한</p>
+              </li>
+              <li>
+                <h5>COLOR</h5>
+                <ul>
+                  <li class="color1"><span>&nbsp;</span> MAIN #AB162C</li>
+                  <li class="color2"><span>&nbsp;</span> POINT #93171F</li>
+                  <li class="color3"><span>&nbsp;</span> POINT #FDCD63</li>
+                </ul>
+              </li>
+              <li>
+                <h5>USED TOOL</h5>
+                <ul class="tool">
+                  <li><img src="./images/ps.png" alt="포토샵">사진 보정</li>
+                  <li><img src="./images/figma.png" alt="피그마">디자인 시안</li>
+                  <li><img src="./images/ai.png" alt="일러스트">로고 수정</li>
+                  <li><img src="./images/vscode.png" alt="vs코드">웹 제작</li>
+                  <li>HTML, CSS</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- 하단 작품 -->
+          <div class="pub_work">
+            <div class="link_btn">
+              <a href="">WEB VIEW</a>
+              <a href="">FIGMA VIEW</a>
+            </div>
+            <!-- 노트북 -->
+            <div class="laptop_box">
+              <div class="laptop_wrap">
+                <a href=""><img src="./images/pub3_pc.jpg" alt="죠스떡볶이 pc버전"></a>
+              </div>
+              <img src="./images/laptop.png" alt="노트북 화면">
+            </div>
+            <!-- 태블릿 -->
+            <div class="tablet_box">
+              <div class="tablet_wrap">
+                <a href=""><img src="./images/pub3_tablet.jpg" alt="죠스떡볶이 태블릿버전"></a>
+              </div>
+              <img src="./images/tablet.png" alt="태블릿 화면">
+            </div>
+            <!-- 모바일 -->
+            <div class="mobile_box">
+              <div class="mobile_wrap">
+                <a href=""><img src="./images/pub3_phone.jpg" alt="죠스떡볶이 모바일버전"></a>
+              </div>
+              <img src="./images/mobile_bezel.png" alt="모바일 베젤">
+              <img src="./images/mobile.png" alt="모바일 화면">
+            </div>
+            <span class="page_num">03</span>
+            <div class="work_bg">&nbsp;</div>
+          </div>
+          <div class="blind b3"></div>
+        </article>
+
+        <!-- 현대캐스퍼 -->
+        <article id="p04">
+          <h2 class="hidden">퍼블리싱 4</h2>
+          <!-- 상단 설명-->
+          <div class="pub_desc">
+            <div class="pub_title">
+              <h3>현대자동차 캐스퍼</h3>
+              <h4>Clone Coding</h4>
+              <span>2023.07.31 ~ 2023.08.07</span>
+              <p>
+                현대자동차 캐스퍼 공식 홈페이지를<br>
+                스크롤 원페이지로 클론 코딩하였습니다.
+              </p>
+            </div>
+            <ul>
+              <li>
+                <h5>PART</h5>
+                <p>클론 코딩</p>
+              </li>
+              <li>
+                <h5>CONTRIBUTION</h5>
+                <p>구현 100%</p>
+              </li>
+              <li>
+                <h5>CONCEPT</h5>
+                <p>경쾌한, 동적인, 젊은</p>
+              </li>
+              <li>
+                <h5>COLOR</h5>
+                <ul>
+                  <li class="color1"><span>&nbsp;</span> MAIN #002C5F</li>
+                  <li class="color2"><span>&nbsp;</span> POINT #333333</li>
+                  <li class="color3"><span>&nbsp;</span> BG #FFFFFF</li>
+                </ul>
+              </li>
+              <li>
+                <h5>USED TOOL</h5>
+                <ul class="tool">
+                  <li><img src="./images/vscode.png" alt="vs코드">웹 제작</li>
+                  <li>HTML, CSS, JQUERY</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- 하단 작품 -->
+          <div class="pub_work">
+            <div class="link_btn">
+              <a href="">WEB VIEW</a>
+            </div>
+            <!-- 작품 -->
+            <div class="pub4_wrap">
+              <a href="" alt=""><img src="./images/pub4_moniter.png" alt="현대 캐스퍼 PC버전"></a>
+              <a href="" alt=""><img src="./images/pub4.png" alt="현대 캐스퍼 PC버전"></a>
+            </div>
+            <span class="page_num">04</span>
+            <div class="work_bg">&nbsp;</div>
+          </div>
+          <div class="blind b4"></div>
+        </article>
+
+        <!-- 하림펫푸드 -->
+        <article id="p05">
+          <h2 class="hidden">퍼블리싱 5</h2>
+          <!-- 상단 설명-->
+          <div class="pub_desc">
+            <div class="pub_title">
+              <h3>하림펫푸드</h3>
+              <h4>Clone Coding</h4>
+              <span>2023.06.19 ~ 2023.06.23</span>
+              <p>
+                반려동물을 위한 웰빙푸드를 제공하는<br>
+                하림 펫푸드의 공식 홈페이지를<br>
+                반응형 페이지로 클론 코딩하였습니다.
+              </p>
+            </div>
+            <ul>
+              <li>
+                <h5>PART</h5>
+                <p>클론 코딩</p>
+              </li>
+              <li>
+                <h5>CONTRIBUTION</h5>
+                <p>구현 100%</p>
+              </li>
+              <li>
+                <h5>CONCEPT</h5>
+                <p>싱싱한, 사랑스러운, 귀여운</p>
+              </li>
+              <li>
+                <h5>COLOR</h5>
+                <ul>
+                  <li class="color1"><span>&nbsp;</span> MAIN #E32929</li>
+                  <li class="color2"><span>&nbsp;</span> POINT #333333</li>
+                  <li class="color3"><span>&nbsp;</span> BG #FFFFFF</li>
+                </ul>
+              </li>
+              <li>
+                <h5>USED TOOL</h5>
+                <ul class="tool">
+                  <li><img src="./images/vscode.png" alt="vs코드">웹 제작</li>
+                  <li>HTML, CSS</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- 하단 작품 -->
+          <div class="pub_work">
+            <div class="link_btn">
+              <a href="">WEB VIEW</a>
+            </div>
+            <!-- 작품 -->
+
+            <span class="page_num">05</span>
+            <div class="work_bg">&nbsp;</div>
+          </div>
+          <div class="blind b5"></div>
+        </article>
+
+        <!-- 아프리카 동물병원 -->
+        <article id="p06">
+          <div class="layout">
+            <h2 class="hidden">퍼블리싱 6</h2>
+            <!-- 상단 설명-->
+            <div class="pub_desc">
+              <div class="pub_title">
+                <h3>아프리카 동물병원</h3>
+                <h4>Clone Coding</h4>
+                <span>2023.07.14 ~ 2023.07.20</span>
+                <p>
+                  아프리카 동물병원 공식 홈페이지를<br>
+                  적응형 페이지로 클론 코딩하였습니다.
+                </p>
+              </div>
+              <ul>
+                <li>
+                  <h5>PART</h5>
+                  <p>클론 코딩</p>
+                </li>
+                <li>
+                  <h5>CONTRIBUTION</h5>
+                  <p>구현 100%</p>
+                </li>
+                <li>
+                  <h5>CONCEPT</h5>
+                  <p>귀여운, 포근한, 감성적인</p>
+                </li>
+                <li>
+                  <h5>COLOR</h5>
+                  <ul>
+                    <li class="color1"><span>&nbsp;</span> MAIN #D45651</li>
+                    <li class="color2"><span>&nbsp;</span> POINT #333333</li>
+                    <li class="color3"><span>&nbsp;</span> BG #FFFFFF</li>
+                  </ul>
+                </li>
+                <li>
+                  <h5>USED TOOL</h5>
+                  <ul class="tool">
+                    <li><img src="./images/vscode.png" alt="vs코드">웹 제작</li>
+                    <li>HTML, CSS, JQUERY</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 하단 작품 -->
+            <div class="pub_work">
+              <div class="link_btn">
+                <a href="">WEB VIEW</a>
+              </div>
+              <!-- 작품 -->
+
+              <span class="page_num">06</span>
+              <div class="work_bg">&nbsp;</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 백그라운드 -->
+        <div class="inner">&nbsp;</div>
+      </div>
+    </section>
+
+    <!-- UI/UX 디자인 -->
+    <section id="design">
+      <div class="layout">
+      <h2 class="hidden">디자인</h2>
+      
+      <!-- 배경 -->
+      <div class="d_title">
+        <div class="layout">
+          <h3><span>02</span>UI/UX DESIGN</h3>
+        </div>
+      </div>
+
+        <!-- 작품 -->
+        <div class="work_wrap">
+          <ul>
+            <!-- 뮤지엄고 -->
+            <li class="d01">
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front">
+                    <img src="./images/pub1_about.jpg" alt="">
+                  </div>
+                  <div class="back">
+                    <span class="more">CLICK<br>자세히 보기</span>
+                    <div>
+                      <span>2023.05.12 ~ 2023.06</span>
+                      <p>“뮤지엄고”는 개인의 취향과 상황에 맞춰 박물관 전시 정보를 제공하는 앱입니다.<br>퍼소나에 맞게 다양한 사용자를 고려하여 보다 쉽게 원하는 정보를 찾을 수 있도록 제작하였습니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card_info">
+                  <h4>뮤지엄고</h4>
+                  <h5>UI/UX 모바일 앱 디자인</h5>
+                </div>
+              </div>
+
+              <!-- 상세내용 -->
+              <div class="pop1">
+                <div class="layout">
+                  <i class="close">close</i>
+                  <div class="d_desc">
+                    <h4>뮤지엄고</h4>
+                    <h5>UI/UX 모바일 앱 디자인</h5>
+                    <span>2023.05.12 ~ 2023.06</span>
+                    <a href="" class="d_btn">PROTOTYPE VIEW</a>
+                    <ul>
+                      <li>
+                        <h6>PART</h6>
+                        <p>메타버스 페이지 담당</p>
+                      </li>
+                      <li>
+                        <h6>CONTRIBUTION</h6>
+                        <p>메타버스 부분<br>기획, 디자인, 구현 100%</p>
+                      </li>
+                      <li>
+                        <h6>CONCEPT</h6>
+                        <p>모던한, 차분한, 깔끔한</p>
+                      </li>
+                      <li>
+                        <h6>COLOR</h6>
+                        <ul>
+                          <li class="color1"><span>&nbsp;</span> MAIN #B3A48F</li>
+                          <li class="color2"><span>&nbsp;</span> POINT #361B00</li>
+                          <li class="color3"><span>&nbsp;</span> BG #F9F9F9</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h6>USED TOOL</h6>
+                        <ul class="tool">
+                          <li><img src="./images/ps.png" alt="포토샵">사진 보정</li>
+                          <li><img src="./images/figma.png" alt="피그마">디자인 시안</li>
+                          <li><img src="./images/ai.png" alt="일러스트">로고 제작</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="d_work">
+                    <ul>
+                      <li><a href=""><img src="./images/d1_1.jpg" alt="뮤지엄고 작업물"></a></li>
+                      <li><a href=""><img src="./images/d1_2.jpg" alt="뮤지엄고 작업물"></a></li>
+                      <li><a href=""><img src="./images/d1_3.jpg" alt="뮤지엄고 작업물"></a></li>
+                      <li><a href=""><img src="./images/d1_4.jpg" alt="뮤지엄고 작업물"></a></li>
+                      <li><a href=""><img src="./images/d1_5.jpg" alt="뮤지엄고 작업물"></a></li>
+                      <li><a href=""><img src="./images/d1_6.jpg" alt="뮤지엄고 작업물"></a></li>
+                      <li><a href=""><img src="./images/d1_7.jpg" alt="뮤지엄고 작업물"></a></li>
+                      <li><a href=""><img src="./images/d1_8.jpg" alt="뮤지엄고 작업물"></a></li>
+                      <li><a href=""><img src="./images/d1_9.jpg" alt="뮤지엄고 작업물"></a></li>
+                      <li><a href=""><img src="./images/d1_10.jpg" alt="뮤지엄고 작업물"></a></li>
+                      <li><a href=""><img src="./images/d1_11.jpg" alt="뮤지엄고 작업물"></a></li>
+                      <li><a href=""><img src="./images/d1_12.jpg" alt="뮤지엄고 작업물"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="hidden">연락</h2>
+      <div class="layout">
+        <p>끝까지 봐주셔서 감사합니다.<br>항상 노력하는 신입 웹퍼블리셔가 되겠습니다.</p>
+        <h3>CONTACT to me</h3>
+        <ul>
+          <li><a href="">
+              <img src="" alt="">
+              <span>call</span>
+          </a></li>
+          <li><a href="">
+              <img src="" alt="">
+              <span>kakao</span>
+          </a></li>
+          <li><a href="">
+              <img src="" alt="">
+              <span>mail</span>
+          </a></li>
+        </ul>
+      </div>
+      
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer>
+    <h2>
+      <a href="index.html" title="메인페이지 바로가기">
+        <img src="./images/logo_black.png" alt="XIU">
+      </a>
+    </h2>
+    <address>
+      <p>PC 1920 * 1080 해상도에 적합합니다.</p>
+      <p>본 사이트는 상업적으로 사용하는 것이 아닌 개인 포트폴리오용임을 알려드립니다.</p>
+      <p>&copy; Copyrights 2023. XIU all rights reserved.</p>
+    </address>
+  </footer>
+</body>
+</html>
