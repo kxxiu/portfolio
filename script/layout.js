@@ -25,6 +25,7 @@ $(document).ready(function(){
       let gageNum = $('.gage_num');
       let g = 0;
 
+      //8개 작성
       let progress = setInterval(() => {
         g++;
         gageNum.text( g + '%');
@@ -34,6 +35,13 @@ $(document).ready(function(){
           clearInterval(progress);
         }
       },10)
+
+      //setInterval(함수명, 시간);  es6
+      // let Timer = setInterval(function(){
+      //},3000)
+
+      // let Timer = setInterval(()=>{
+      // },3000)
 
     }else if(e.originalEvent.deltaY < 0){
       if(page <= 2) return;
@@ -77,7 +85,7 @@ $(document).ready(function(){
 
     //프로필 - 이미지
     if(sPos > 920){
-    $('.img_box img').animate({'margin-top':'0px'},600,'easeInOutCubic')
+    $('.img_box img').animate({'margin-top':'0px'},400,'easeInOutCubic')
 
     //밑줄
     $('.pro_txt .under1').delay(1000).animate({'background-size':'100%'},300,function(){
@@ -257,11 +265,14 @@ $(document).ready(function(){
       let moveUpTimer = setInterval(moveUp, 600);
     }
 
-    // 퍼블리싱 - 현대캐스퍼
-    // if(sPos >= 5703){
-    //   $('.pub4_wrap a:last-child img').animate({'opacity':'1','scale':'1'},600)
-    // }
+    // 퍼블리싱 - 현대자동차 캐스퍼
+    if(sPos >= 5703 && sPos <= 6403){
+      $('.pub4_wrap a:last-child img').addClass('imgScale');
+    }else{
+      $('.pub4_wrap a:last-child img').removeClass('imgScale');
+    }
 
+    
 
     // UI/UX 디자인 //
 
@@ -275,21 +286,23 @@ $(document).ready(function(){
     }
 
     // 배경 고정
-    if(sPos >= 9410 && sPos <=11810){
+    if(sPos >= 9410 && sPos <= 11680){
       $('.d_title').css('position','fixed')
     }else{
       $('.d_title').css('position','absolute')
     }
 
-  })
 
-  //연락
-  // if(sPos >= 11810){
-  //   $('#contact').css({
-  //     'position':'fixed',
-  //     'bottom':'0'
-  //   });
-  // }
+    //연락
+    // if(sPos >= 11683){
+    //   $('#contact').css({'position':'fixed','top':'100vh'}).delay(200).animate({'top':'0',
+    //     'z-index':100
+    //   },300);
+      
+    // }
+    })
+
+
 
 
 

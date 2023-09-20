@@ -27,17 +27,16 @@
   --ff-title: 'Modak', 'Quicksand', sans-serif;
   --ff-eng: 'Quicksand', sans-serif, arial;
   --ff-kr: 'Dovemayo_gothic', '맑은 고딕', sans-serif;
-  --ff-kr2: 'SUITE-Regular';
+  --ff-kr2: 'SUITE-Regular', 'Dovemayo_gothic', '맑은 고딕';
 }
 
 a{text-decoration: none;color: var(--c-main);}
 body{
   background: var(--c-bg);
   color: var(--c-main);
-  font-family: var(--ff-eng);
+  font-family: var(--ff-kr2);
   font-weight: 500;
   overflow-x: hidden;
-  /* font-family: 'Dovemayo_gothic', '맑은 고딕', 'sans-serif'; */
 }
 
 /* 공통 클래스 */
@@ -64,6 +63,7 @@ nav{
   display: none;
   position: fixed;z-index: 1000;
   left: 0;top: 55%;
+  font-family: var(--ff-eng);
 }
 .gnb li a{
   position: relative;z-index: 1;
@@ -82,7 +82,12 @@ nav{
 
 /*** 푸터 ***/
 footer{
+  height: 100%;
+  padding: 10px 0;
   background: var(--c-main);
   color: var(--c-bg);
-  display: flex;
+  font-size: 15px;
+  text-align: center;
 }
+footer h2 img{width: 65px;}
+footer address{padding-top: 7px;}

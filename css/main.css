@@ -12,6 +12,7 @@ main .layout{
   position: relative;
   width: 100%;height: 100vh;
   overflow: hidden;
+  font-family: var(--ff-eng);
 }
 #intro article{
   position: absolute;
@@ -246,7 +247,6 @@ main .layout{
 .pro_txt h3{
   line-height: 50px;
   font-size: 40px;
-  font-family: var(--ff-kr);
 }
 .pro_txt p{
   margin-top: 25px;
@@ -404,8 +404,8 @@ main .layout{
 }
 #chapter h3 span, #design h3 span{
   color: transparent;
-  font-size: 130px;
   -webkit-text-stroke: 1px #fff;
+  font-size: 130px;
 }
 #chapter h3, #chapter p, #chapter ul{
   position: relative;top: 100px;
@@ -443,7 +443,7 @@ main .layout{
 }
 @keyframes list{
   0%{top: -10px}
-  50%{top: -40px;}
+  50%{top: -30px;}
   100%{top: -10px;}
 }
 
@@ -645,7 +645,6 @@ main .layout{
 #p02 .color2 span{background: #492B23;}
 #p02 .color3 span{background: #FEF9F3;}
 #p02 .work_bg{background: conic-gradient(#66948F 180deg, transparent 0deg);}
-
 .pub2_wrap{
   position: relative;z-index: 10;
   left: calc(50% - 134px);bottom: -84px;
@@ -655,7 +654,6 @@ main .layout{
   position: absolute;z-index: 1;
   left: 0;bottom: -11%;
 }
-
 /* 슬라이드 */
 .pub2{
   position: absolute;z-index: 2;
@@ -691,7 +689,6 @@ main .layout{
   width: 100%; height: 340px;
   overflow: hidden;
 }
-
 /* 태블릿 */
 #p03 .tablet_box{
   position: absolute;z-index: 1;
@@ -704,7 +701,6 @@ main .layout{
   overflow: hidden;
   border-radius: 5px;
 }
-
 /* 모바일 */
 #p03 .mobile_box{
   position: absolute;z-index: 1;
@@ -735,9 +731,19 @@ main .layout{
 }
 .pub4_wrap a:last-child img{
   position: absolute;top: -8px;left: 53%;
-  transform: translateX(-50%) scale(1);
+  transform: translateX(-50%) scale(0);
   width: 1290px;
-  opacity: 1;
+  opacity: 0;
+}
+
+/* 모니터 뒷부분 */
+.imgScale{
+  animation: imgScale 0.6s;
+  animation-fill-mode: forwards;
+}
+@keyframes imgScale{
+  from{opacity: 0; transform: translateX(-50%) scale(0)}
+  to{opacity: 1; transform: translateX(-50%) scale(1)}
 }
 
 /* P05 - 하림펫푸드 */
@@ -745,6 +751,7 @@ main .layout{
 #p05 .color2 span{background: #333333;border: 1px solid #565656;box-sizing: border-box;}
 #p05 .color3 span{background: #FFFFFF;}
 #p05 .work_bg{background: conic-gradient(#9F2929 180deg, transparent 0deg);}
+#p05 .tool{display: block;}
 
 /* P06 - 아프리카 동물병원 */
 #p06 .color1 span{background: #D45651;}
@@ -769,14 +776,13 @@ main .layout{
 }
 
 /*** UI/UX 디자인 ***/
-
 #design{
   position: relative;
   width: 100%;height: 100vh;
   background: var(--c-bg);
 }
 
-/* 배경 */
+/* 타이틀 배경 */
 .d_title{
   position: relative;
   top: 0;left: 0;
@@ -796,11 +802,13 @@ main .layout{
 /* 작품 */
 .work_wrap{
   position: relative;
-  width: 100%;height: 200vh;
+  width: 100%;height: 400vh;
   top: 130%;left: 0;
-  background-color: rgb(244, 164, 96, .5);
+  /* background-color: rgb(244, 164, 96, .5); */
 }
 .card{
+  width: 350px;
+  height: 500px;
   perspective: 1000px;
   border-radius: 40px;
 }
@@ -811,22 +819,72 @@ main .layout{
   transform-style: preserve-3d;
   cursor: pointer;
 }
+
 .front{
   position: absolute;
   top: 0;left: 0;
   width: 100%;height: 100%;
 }
 .front img{
+  width: 100%;height: 100%;
   object-fit: cover;
   border-radius: 40px;
 }
 .back{
+  display: flex;
   transform: rotateY(180deg);
   width: 100%;height: 100%;
   border-radius: 40px;
   font-size: 18px;
   backface-visibility: hidden;
 }
+.d_desc{
+  flex: none;
+  width: 272px;
+  padding: 35px 25px;
+}
+.d_desc h4{
+  margin-bottom: 7px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.d_desc h5{
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.d_desc span{
+  display: block;
+  margin-bottom: 20px;
+}
+.d_desc p{
+  font-size: 17px;
+  line-height: 22px;
+}
+.d_btn{
+  margin: 28px 0 20px 0;
+  display: block;
+  width: 125px;
+  font-size: 15px;
+}
+.d_btn:hover{
+  background: var(--c-point);
+  font-size: 14px;
+}
+
+/* 작품 */
+.d_work{
+  margin: 27px 0;
+  display: none;
+}
+.d_work ul{
+  display: flex;
+  position: absolute;
+  gap: 10px;
+}
+.d_work ul:last-child{opacity: 0;}
+.d_work ul li img{width: 203px;height: 100%;}
+
+/* 카드 하단 작품명 */
 .card_info{
   text-shadow: 0 0 4px var(--c-bg);
   font-size: 25px;
@@ -835,98 +893,17 @@ main .layout{
   font-weight: bold;
 }
 .card_info h5{font-size: 22px;}
-.card_inner:hover{transform: rotateY(180deg);} 
 
 /* 뮤지엄고 */
-.d01{padding: 50px;}
-.d01 .card{width: 400px;height: 550px;}
-.d01 .front img{width: 400px;height: 550px;}
+.d01{}
 .d01 .back{background-color: #736046;}
-.d01 .back .more{
-  display: block;
-  padding-top: 40px;
-  text-align: center;
-  line-height: 27px;
-  font-size: 18px;
-}
-.d01 .back div{
-  position: absolute;
-  bottom: 40px;
-  line-height: 26px;
-  padding: 0 30px;
-}
-.d01 .back div span{
-  display: block;
-  margin-bottom: 25px;
-}
-
-/* 상세내용 */
-.pop1{
-  display: none;
-  position: fixed;z-index: 100;
-  top: 0;left: 0;
-  width: 100%;height: 100%;
-  background: rgba(0,0,0,0.9);
-}
-.pop1 .layout{
-  position: relative;
-  display: flex;
-}
-.pop1 .close{
-  position: absolute;
-  top: 0;right: 0;
-}
-/* 설명 */
-.pop1 .d_desc{padding: 80px 0;}
-.pop1 .d_desc h4{
-  margin-bottom: 5px;
-  font-size: 30px;
-  font-weight: bold;
-}
-.pop1 .d_desc h5{
-  margin-bottom: 12px;
-  font-size: 26px;
-  line-height: 30px;
-}
-.pop1 .d_desc span{font-size: 20px;}
-.d_btn{
-  margin: 28px 0 20px 0;
-  display: block;
-  width: 180px;
-}
-.d_btn:hover{background: var(--c-point);}
-.pop1 .d_desc > ul{width: 220px;}
-
-.pop1 .d_desc > ul > li{
-  border-top: 2px solid var(--c-main);
-  padding: 5px;
-  margin-bottom: 20px;
-}
-.pop1 .d_desc ul li h6{
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-.pop1 .d_desc ul li p{
-  padding-left: 5px;
-  line-height: 22px;
-}
-
-.pop1 .d_work{}
-.pop1 .d_work ul{
-  display: flex;
-  margin: 163px 70px;
-  gap: 20px;
-}
-.pop1 .d_work ul li{
-}
-.pop1 .d_work ul li img{
-  width: 250px;height: 100%;
-}
+.d02{top: 40%;left: 48%;}
 
 
 /*** 연락 ***/
 #contact{
-  height: 100vh;
+  margin-top:400vh;
+  height: calc(100vh - 100px);
   background-image: url(../images/contact_bg.png);
   background-position: top;
   background-repeat: no-repeat;
@@ -934,23 +911,38 @@ main .layout{
   color: var(--c-bg);
 }
 #contact p{
-  margin-top: 70px;
+  padding-top: 80px;
   color: var(--c-main);
-  font-size: 24px;
-  line-height: 46px;
+  font-size: 26px;
+  font-family: var(--ff-kr);
+  line-height: 34px;
   text-align: center;
 }
 #contact ul{
   display: flex;
   justify-content: center;
-  gap: 50px;
-  margin-top: 70px;
+  gap: 90px;
+  margin-top: 60px;
 }
-#contact ul li{
-}
-#contact ul a{
+/* #contact ul li:first-child::before{
+  content: '';
   display: block;
-  width: 280px;height: 280px;
+  position: absolute;
+  width: 260px;height: 260px;
+  border-radius: 50%;
+  background: conic-gradient(from 0turn, #da5e56, rgba(46, 46, 46, 0) 0.5turn, #da5e56 1turn );
+} */
+#contact ul li:first-child:hover img{
+  animation: call 0.6s infinite ease-in-out;
+}
+#contact ul li:nth-child(2){}
+#contact ul li:last-child:hover img{
+  animation: mail 0.6s infinite ease-in-out;
+
+}
+#contact ul li a{
+  display: block;
+  width: 260px;height: 260px;
   background: var(--c-bg);
   color: var(--c-main);
   font-family: var(--ff-title);
@@ -958,5 +950,26 @@ main .layout{
   border-radius: 50%;
   text-align: center;
 }
-#contact ul a img{}
-#contact ul a span{}
+#contact ul li a img{
+  display: block;
+  width: 92px;
+  margin: auto;
+  padding: 77px 0 20px 0;
+}
+#contact ul li a span{display: inline-block;}
+
+@keyframes call{
+  0%{}
+  25%{transform: scale(1.1);}
+  50%{transform: rotate(23deg) translate(8px, -8px)}
+  85%{transform: rotate(-13deg) translate(8px, -8px)}
+  100%{}
+}
+
+@keyframes mail{
+  0%{}
+  25%{translate: translate(8px, -12px) scale(0.9);}
+  /* 50%{transform: rotate(23deg) translate(8px, -8px)}
+  85%{transform: rotate(-13deg) translate(8px, -8px)} */
+  100%{}
+}

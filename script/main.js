@@ -181,18 +181,48 @@ $(document).ready(function(){
     $('#p02 .slide_arrow').animate({'left':'350px'},1000,'easeOutElastic').animate({'left':'320px'},1000);
   }
 
-  let slidemark2Timer = setInterval(slidemark2, 0)
+  let slidemark2Timer = setInterval(slidemark2, 0);
 
 
   // UI/UX 디자인 //
-  $('.d01 .card').click(function(){
-    $('.pop1').fadeIn();
+  $('.card').hover(function(){
+
+    $('.card_inner').stop().css('transform','rotateY(180deg');
+    $(this).stop().delay(400).animate({'width':'100%'},300);
+    $('.d_work').stop().delay(500).fadeIn();
+
+  },function(){
+
+    $('.d_work').stop().fadeOut();
+    $(this).stop().delay(100).animate({'width':'380px'},300,function(){
+      $('.card_inner').stop().css('transform','rotateY(0deg');
+    });
   });
-  $('.pop1 .close').click(function(){
-    $('.pop1').fadeout();
+  
+
+  // 뮤지엄고
+  function workFade(){
+    $('.d_work ul:first-child').delay(2000).animate({'opacity':'0'},400).delay(2000).animate({'opacity':'1'},400)
+    $('.d_work ul:last-child').delay(2000).animate({'opacity':'1'},400).delay(2000).animate({'opacity':'0'},400)
+  }
+  $('.d01').hover(function(){
+    let workFadeTimer = setInterval(workFade, 2000);
+  },function(){
+    clearInterval(workFade);
   });
 
+
+
+
+
+  //컨텍트
+  let call = $('#contact ul li:first-child');
+  let kakao = $('#contact ul li:nth-child(2)');
+  let mail = $('#contact ul li:last-child');
   
+
+
+
 
 
   });
