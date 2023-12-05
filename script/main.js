@@ -1,42 +1,38 @@
 $(document).ready(function(){
 
-  // 로딩페이지 //
+  // 로딩 페이지
 
   // HELLO
-  $('.load_page h2').css({
-    'left':'-100%',
-    'opacity':'0',
-  }).animate({
+  $('#load h2').animate({
     'left':'-20%',
-    'opacity':'1',
-    'letter-spacing':'30px'
-  },300).animate({
+    'letter-spacing':'30px',
+    'opacity':'1'
+  }).animate({
     'left':'0',
     'letter-spacing':'0',
-  },600).animate({
-    'letter-spacing':'30px',
+  },700).animate({
     'left':'20%',
+    'letter-spacing':'30px',
     'opacity':'0',
-  },300,function(){
+  },500,function(){
     $(this).addClass('hidden');
   });
 
   // I'M
-  $('.load_page h3').prepend('<span class="insert_k">K</span>').delay(600).animate({
-    'left':'10%',
+  $('#load h3').prepend('<span class="k">K</span>').delay(800).animate({
+    'left':'-15%',
   }).animate({
+    'left':'-5%',
     'opacity':'1',
-    'left':'19%',
-  },400);
+  });
 
-  // K   
-  $('.insert_k').delay(1400).animate({
+  // K
+  $('.k').delay(1600).animate({
+    'left':'0',
     'opacity':'1',
-    'left':'0'
-  },600, 'easeOutBounce')
+  },500, 'easeOutBounce');
 
-  // '
-  $('.dot').delay(1530).animate({'top':'-65px'},function(){
+  $('.dot').delay(1700).animate({'top':'-65px'},function(){
     $(this).css({
       'position':'absolute',
       'transform':'rotate(30deg)'
@@ -44,186 +40,185 @@ $(document).ready(function(){
   });
 
   // SIWOO
-  $('.load_page h4').delay(1500).animate({
-    'opacity':'1',
-    'left':'44%',
-    'letter-spacing':'20px'
-  },400).animate({
+  $('#load h4').delay(2000).animate({
+    'left':'45%',
+    'letter-spacing':'20px',
+    'opacity':'1'
+  }).animate({
     'letter-spacing':'0px'
-  },400)
+  },function(){
+    $('#load h3').css('background','none');
+  });
 
-  // KIM 삭제
-  $('.load_page h3').delay(900).animate({'opacity':'0'})
-  
-  // SIWOO 삭제
-  function load1(){
-    $('.load_page h4').css({
-    'transform': 'rotateX(180deg)',
-    'top':'38%',
-    }).css('opacity','0');
+  // 배경전환
+  $('#load').append('<div class="bg1">&nbsp;</div><div class="bg2">&nbsp;</div>');
+  $('.bg1').delay(2800).animate({'top':'0'},800,function(){
+    $('.bg2').animate({'top':'0'},800);
+    $('#load h3, #load h4').delay(400).animate({'color':'#0F72AA'},100,function(){
+      $(this).delay(300).fadeOut(600);
+      $('#load').delay(700).fadeOut();
+      $('header').delay(700).fadeIn();
+    });
+  });
+
+  // 인트로
+
+  function intro(){
+    $('.big_circle').addClass('ball');
+    $('#intro article').delay(2500).fadeIn(100);
   }
 
-  let load1Timer = setTimeout(load1, 2650);
-
-  //SEE YOU
-  function load2 (){
-    $('.load_page h4').text('SEE YOU').css({
-      'transform':'rotateX(0deg)',
-      'opacity':'1',
-      'top':'40%',
+  function bubble(){
+    $('.circle1').animate({'top':'11%'},1000,'easeOutCirc',function(){
+      $(this).css('background','none').animate({'scale':'1'},800,'easeOutCubic');
+    });
+    $('.circle2').delay(100).animate({'top':'33%'},1000,'easeOutCirc',function(){
+      $(this).animate({'scale':'1'},'easeOutCubic');
+    });
+    $('.circle4').delay(400).animate({'top':'7%'},1000,'easeOutCirc',function(){
+      $(this).css('background','none').animate({'scale':'1'},600,'easeOutCubic');
+    });
+    $('.circle3').delay(800).animate({'top':'65%'},1000,'easeOutCirc',function(){
+      $(this).css('background','none').animate({'scale':'1'},'easeOutCubic');
+    });
+    $('.circle6').delay(1100).animate({'top':'71%'},1000,'easeOutCirc',function(){
+      $(this).animate({'scale':'1'},'easeOutCubic'),600;
+    });
+    $('.circle5').delay(1200).animate({'top':'45%'},1000,'easeOutCirc',function(){
+      $(this).css('background','none').animate({'scale':'1'},500,'easeOutCubic');
     });
   }
 
-  let load2Timer = setTimeout(load2, 2800);
+  let introTimer = setTimeout(intro, 4800)
+  let bubbleTimer = setTimeout(bubble, 7200)
 
-  // MY WORK
-  $('.load_page h5').delay(2900).animate({
-    'opacity':'1',
-    'top':'54%',
-  },400,'easeOutCirc')
+  // 퍼블리싱
 
-  // LET'S
-  $('.load_page div').delay(3450).fadeIn();
-  $('.load_page div').delay(150).animate({'background-color':'#0F72AA'}).delay(300).animate({
-    'background-color':'#F2F1EB','color':'#0F72AA'}).delay(300).animate({'color':'#F2F1EB'})
-  
-  let p = 1;
-  function moveUp(){
-    p++;
-    $('.load_page div h5').animate({'top': -10 * p + '%'});
-    $('.load_page div h5').append('<br>LET’S').append('<br>LET’S');
-  }
-  let moveUpTimer = setInterval(moveUp,0);
-  
-  // GET START!
-  $('.load_page div h6').delay(5400).animate({
-    'opacity':'1',
-    'font-size':'250px'
-  },600).animate({
-    'font-size':'180px'
-  },400,function(){
-    $('.load_page').fadeOut(300);
-    $('.intro_page').fadeIn(300);
-    clearInterval(moveUp)
-  })
-
-  // 인트로 페이지 //
-
-  // 인트로 내용
-  function intro1(){
-    $('.intro_page .circle2').show();
-    $('.intro_page').css('background-color','#0F72AA');
-    $('.intro_page h2, .intro_page p').delay(1200).animate({'color':'#F2F1EB'},800);
-    $('.intro_page .scroll span').delay(1200).animate({
-      'background-color':'#F2F1EB',
-      'color':'#0F72AA'
-    },800);
-  }
-  
-  function intro2(){
-    $('.intro_page .scroll img').attr('src','./images/intro_arrow2.png');
-    $('.intro_page .scroll span').delay(550).animate({'color':'#F2F1EB'});
-  }
-
-  function intro3(){
-    $('.intro_page .circle1, .intro_page .circle2').hide();
-    $('.intro_page .circle3').show();
-    $('.intro_page').css('background-color','#F2F1EB');
-    $('.intro_page h2, .intro_page p').delay(2200).animate({'color':'#0F72AA'},800);
-    $('.intro_page .scroll span').delay(2200).animate({
-      'background-color':'#0F72AA',
-      'color':'#F2F1EB'
-    },800);
-  }
-
-  function intro4(){
-    $('.intro_page .scroll img').attr('src','./images/intro_arrow.png');
-  }
-
-  let intro1Timer = setTimeout(intro1, 8400);
-  let intro2Timer = setTimeout(intro2, 9700);
-  let intro3Timer = setTimeout(intro3, 12300);
-  let intro4Timer = setTimeout(intro4, 14600);
-
-  // 스크롤 표시
-  function scroll(){
-    $('.scroll').animate({'top':'60%'},1000).animate({'top':'57%'},1000);
-  }
-
-  let scrollTimer = setInterval(scroll, 2000)
-
-  
-  // 퍼블리싱 //
-
-  // p01 블랙핑크
+  // P01 - 블랙핑크
   var swiper = new Swiper(".pub1", {
     slidesPerView: 2,
     centeredSlides: true,
     spaceBetween: 0,
   });
 
-  // p01 슬라이드 표시
-  function slidemark(){
-    $('#p01 .slide_arrow').animate({'left':'220px'},1000,'easeOutElastic').animate({'left':'250px'},1000);
+  // 슬라이드 표시
+  function slideMark(){
+    $('.pub1 > div').animate({'left':'17%'},1000,'easeOutElastic').animate({'left':'18%'},1000)
   }
 
-  let slidemarkTimer = setInterval(slidemark, 0)
+  let markTimer = setInterval(slideMark, 0);
 
-  // p02 시장하시죠
+  // P02 - 시장하시죠
   var swiper2 = new Swiper(".pub2", {
     slidesPerView: 4,
     centeredSlides: true,
     spaceBetween: 0,
   });
 
-  // p02 슬라이드 표시
-  function slidemark2(){
-    $('#p02 .slide_arrow').animate({'left':'350px'},1000,'easeOutElastic').animate({'left':'320px'},1000);
+  // 슬라이드 표시
+  function slideMark2(){
+    $('.pub2 > div').animate({'left':'22%'},1000,'easeOutElastic').animate({'left':'23%'},1000);
   }
 
-  let slidemark2Timer = setInterval(slidemark2, 0);
+  let mark2Timer = setInterval(slideMark2, 0);
 
+  // P03 - 죠스떡볶이
+  let laptop = $('#p03 .laptop_box > div');
+  let tablet = $('#p03 .tablet_box > div');
+  let mobile = $('#p03 .mobile_box > img');
 
-  // UI/UX 디자인 //
+  let mv1 = 0;
+  let mv2 = 0;
+  let mv3 = 0;
+
+  laptop.click(function(){
+    function moveUp(){
+      laptop.children('.mouse').fadeOut(300);
+      laptop.children('img').animate({'margin-top':mv1},600);
+      mv1 -= 83;
+
+      if(mv1 <= -913){
+        clearInterval(moveTimer);
+        mv1 = 0;
+        laptop.children('img').delay(300).stop().animate({'margin-top': 0},function(){
+          laptop.children('.mouse').fadeIn(300);
+        });
+      }
+    }
+    let moveTimer = setInterval(moveUp, 600);
+  });
+
+  tablet.click(function(){
+    function moveUp2(){
+      tablet.children('.mouse').fadeOut(300);
+      tablet.children('img').animate({'margin-top':mv2},600);
+      mv2 -= 118;
+      console.log(mv2);
+
+      if(mv2 <= -1062){
+        clearInterval(moveTimer2);
+        mv2 = 0;
+        tablet.children('img').delay(300).animate({'margin-top': 0},function(){
+          tablet.children('.mouse').fadeIn(300);
+        });
+      }
+    }
+    let moveTimer2 = setInterval(moveUp2, 600);
+  });
+
+  mobile.click(function(){
+    function moveUp3(){
+      mobile.siblings().find('.mouse').fadeOut(300);
+      mobile.siblings().children('img').animate({'margin-top':mv3},600);
+      mv3 -= 77.8;
+      console.log(mv3);
+
+      if(mv3 <= -778){
+        clearInterval(moveTimer3);
+        mv3 = 0;
+        mobile.siblings().children('img').delay(300).stop().animate({'margin-top': 0},function(){
+          mobile.siblings().find('.mouse').fadeIn(300);
+        });
+      }
+    }
+    let moveTimer3 = setInterval(moveUp3, 600);
+  });
+
+  // P05 - 하림펫푸드
+
+  // UI/UX 디자인
   $('.card').hover(function(){
-
-    $('.card_inner').stop().css('transform','rotateY(180deg');
-    $(this).stop().delay(400).animate({'width':'100%'},300);
-    $('.d_work').stop().delay(500).fadeIn();
-
+    $(this).children().stop().css('transform','rotateY(180deg');
   },function(){
-
-    $('.d_work').stop().fadeOut();
-    $(this).stop().delay(100).animate({'width':'380px'},300,function(){
-      $('.card_inner').stop().css('transform','rotateY(0deg');
-    });
+    $(this).children().stop().css('transform','rotateY(0deg');
   });
-  
 
-  // 뮤지엄고
-  function workFade(){
-    $('.d_work ul:first-child').delay(2000).animate({'opacity':'0'},400).delay(2000).animate({'opacity':'1'},400)
-    $('.d_work ul:last-child').delay(2000).animate({'opacity':'1'},400).delay(2000).animate({'opacity':'0'},400)
-  }
-  $('.d01').hover(function(){
-    let workFadeTimer = setInterval(workFade, 2000);
+  // 컨텍트
+  let call = $('#contact ul li:first-child a');
+  let kakao = $('#contact ul li:nth-child(2) a');
+  let mail = $('#contact ul li:last-child a');
+
+  $('#contact ul li a').hover(function(){
+    $(this).siblings().stop().animate({'opacity':'1'});
   },function(){
-    clearInterval(workFade);
+    $(this).siblings().stop().animate({'opacity':'0'});
   });
 
-
-
-
-
-  //컨텍트
-  let call = $('#contact ul li:first-child');
-  let kakao = $('#contact ul li:nth-child(2)');
-  let mail = $('#contact ul li:last-child');
-  
-
-
-
-
-
+  call.hover(function(){
+    $(this).find('img').addClass('call');
+  },function(){
+    $(this).find('img').removeClass('call');
   });
 
+  kakao.hover(function(){
+    $(this).find('img').addClass('kakao');
+  },function(){
+    $(this).find('img').removeClass('kakao');
+  });
+
+  mail.hover(function(){
+    $(this).find('img').addClass('mail');
+  },function(){
+    $(this).find('img').removeClass('mail');
+  });
+});
