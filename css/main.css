@@ -147,7 +147,7 @@
 .circle2{
   left: 8%;
   width: 230px;height: 230px;
-  background: rgb(217, 217, 217,0.3);
+  background: rgba(217, 217, 217,0.3);
 }
 .circle3{
   left: 3%;
@@ -250,12 +250,12 @@
   display: inline-block;
   position: absolute;
   margin: 2px;
-  background: rgb(13, 114, 170, 0.4);
+  background: rgba(13, 114, 170, 0.4);
   border-radius: 50%;
   font-family: var(--font-kor);
   text-align: center;
 }
-.char li:nth-child(2n){background: rgb(48, 48, 47, 0.2)}
+.char li:nth-child(2n){background: rgba(48, 48, 47, 0.2)}
 .char li:first-child{
   left: 105px;top: 50px;
   width: 75px;line-height: 75px;
@@ -503,7 +503,7 @@
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   width: 1420px;height: 1420px;
-  border: 3px dashed rgb(255, 255, 255,0.8);
+  border: 3px dashed rgba(255, 255, 255,0.8);
   border-radius: 50%;
 }
 .bg span{
