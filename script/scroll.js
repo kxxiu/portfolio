@@ -37,7 +37,7 @@ $(document).ready(function(){
         });
       }
 
-      let skillTimer = setTimeout(skill, 2500)
+      let skillTimer = setTimeout(skill, 3000)
       }
     } else if(e.originalEvent.deltaY < 0){
       if(page == 2) return;
@@ -104,11 +104,11 @@ $(document).ready(function(){
 
       $('.profile_cont p').delay(550).animate({'opacity':'1','margin-top':'3%'},500,'easeOutQuad');
 
-      $('.profile_cont .line1').delay(1200).animate({'background-size':'100%'},300,function(){
-        $('.profile_cont .line2').delay(450).animate({'background-size':'100%'},300)
+      $('.profile_cont .line1').delay(1200).animate({'background-size':'100%'},200,function(){
+        $('.profile_cont .line2').delay(450).animate({'background-size':'100%'},200)
       })
 
-      $('.profile_cont > ul').delay(2500).animate({'opacity':'1','margin-top':'3%'},500);
+      $('.profile_cont > ul').delay(2500).animate({'opacity':'1','margin-top':'3%'});
       
       // 성격
       let ch1 = $('.char li:first-child'); 
@@ -187,7 +187,7 @@ $(document).ready(function(){
         },1000,'easeInOutCirc')
       }
 
-      let charTimer = setInterval(charMove, 2800);
+      let charTimer = setInterval(charMove, 3000);
     }
 
     // 퍼블리싱 목차
@@ -277,7 +277,7 @@ $(document).ready(function(){
       $('#p06 .pub_top').animate({'opacity':'1','top':'0'});
     }
     if(sPos >= 51){
-      tablet.animate({'margin':'0'},500);
+      tablet.animate({'opacity':'1','margin':'0'},500);
       function deviceOn(){
         device.attr('src','./images/pub6_device_on.png');
         tablet.attr('src','./images/pub6_tablet_on.png');

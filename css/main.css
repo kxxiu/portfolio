@@ -482,7 +482,7 @@
 }
 .pub_bottom > ul{
   position: absolute;z-index: 1;
-  left: 50%;top: 5%;
+  left: 50%;top: 45px;
   transform: translateX(-50%);  
 }
 .pub_bottom > ul li{display: inline-block;}
@@ -490,21 +490,22 @@
 /* 배경 */
 .bg{
   position: absolute;top: 0;
-  width: 1440px;height: 1440px;
-  border-radius: 50%;
+  width: 1440px;height: 710px;
+  border-radius: 710px 710px 0 0;
 }
 .bg::after{
   content: '';display: block;
   position: absolute;
-  top: 50%; left: 50%;
+  top: 51%;left: 50%;
   transform: translate(-50%, -50%);
-  width: 1420px;height: 1420px;
+  width: 1420px;height: 710px;
+  border-radius: 710px 710px 0 0;
   border: 3px dashed rgba(255, 255, 255,0.8);
-  border-radius: 50%;
+  border-bottom: none;
 }
 .bg span{
   position: absolute;
-  top: 40%;left: 4%;
+  bottom: 13%;left: 4%;
   font-size: 65px;
   font-family: var(--font-eng);
 }
@@ -524,7 +525,7 @@
 #p01 .bg{background: #A7727D;}
 #p01 .mockup{
   position: relative;z-index: 2;
-  left: calc(50% - 315px);bottom: -11%;
+  left: calc(50% - 315px);top: 100px;
 }
 .pub1{
   position: absolute;z-index: 2;
@@ -544,7 +545,7 @@
 #p02 .bg{background: #66948F;}
 #p02 .mockup{
   position: relative;z-index: 2;
-  left: calc(50% - 134px);bottom: -11%;
+  left: calc(50% - 134px);top: 100px;
 }
 .pub2{
   position: absolute;z-index: 2;
@@ -561,7 +562,6 @@
 
 /* P03 - 죠스떡볶이 */
 #p03 .bg{background: #902D34;}
-#p03 .bg span{top: 38%}
 #p03 .pub_top{padding-bottom: 2%;}
 #p03 .pub_top ul {grid-template-rows: repeat(2, 70px);}
 #p03 .pub_top ul li:nth-child(3){font-size: 17px;}
@@ -641,7 +641,6 @@
 
 /* P04 - 현대자동차 캐스퍼 */
 #p04 .bg{background:#4C709B;}
-#p04 .bg span{top: 41%;}
 #p04 .mockup img{
   position: absolute;left: 50%;
   transform: translateX(-50%);
@@ -673,7 +672,7 @@
 #p05 .pub_top ul li:nth-child(3){font-size: 17px;}
 #p05 .mockup img{
   position: absolute;
-  top: 17%;z-index: 1;
+  top: 120px;z-index: 1;
 }
 #p05 .mockup img:first-child{
   left: 15%;opacity: 0;
@@ -682,7 +681,7 @@
   left: 12%;
 }
 #p05 .mockup img:last-child{
-  top: 27%;right: 23%;
+  top: 220px;right: 23%;
   opacity: 0;
 }
 
@@ -690,12 +689,13 @@
 #p06 .bg{background: #9F2929;}
 #p06 .mockup img{
   position: absolute;
-  left: 22%;top: 9%;
+  left: 22%;top: 100px;
   z-index: 1;
 }
 #p06 .mockup img:last-of-type{
-  top: 35%;left: 45%;
+  top: 360px;left: 600px;
   margin: 23% 0 0 -25%;
+  opacity: 0;
 }
 
 /* 백그라운드 */
