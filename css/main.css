@@ -305,11 +305,7 @@
   text-align: center;
 }
 .skill li span{
-  display: block;
-  transform: translateY(108px);
-  font-family: var(--font-eng);
-  font-size: 16px;
-  font-weight: 600;
+  display: none;
 }
 
 /* 프로그레스 바 */
