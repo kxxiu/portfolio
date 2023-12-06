@@ -21,14 +21,14 @@ $(document).ready(function(){
       function skill(){
         progressBar.each(function () {
           let $this = $(this);
-          let per = $this.attr('per');
+          let data = $this.attr('data');
           let num = $this.children();
           let g = 0;
           
           let progress = setInterval(() => {
             g++;
 
-            if(g == per){
+            if(g == data){
               clearInterval(progress);
             }
             $this.css('background',`conic-gradient(#30302F ${3.6 * g}deg, transparent 0deg`);
