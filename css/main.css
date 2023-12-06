@@ -791,7 +791,7 @@
   line-height: 22px;
 }
 .card_info ul li{margin-bottom: 15px;}
-.card_info ul li h5{
+.card_info ul li h4{
   margin-bottom: 3px;
   font-size: 18px;
   font-weight: 600;
@@ -836,7 +836,7 @@
 /* 배너 */
 #d06{left: 40%;}
 #d06 .front{
-  background-color: #709F68;
+  background-color: #6f9c68;
   border-radius: 30px;
 }
 #d06 .front img{
@@ -853,7 +853,7 @@
   display: block;
   padding-top: 210px;
 }
-#d06 .back{background-color: #709F68;}
+#d06 .back{background-color: #6f9c68;}
 
 /***** 연락 *****/
 
