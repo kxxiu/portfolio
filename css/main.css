@@ -837,7 +837,7 @@
 /* 배너 */
 #d06{left: 40%;}
 #d06 .front{
-  background-color: var(--color-point);
+  background-color: #709F68;
   border-radius: 30px;
 }
 #d06 .front img{
@@ -854,7 +854,7 @@
   display: block;
   padding-top: 210px;
 }
-#d06 .back{background-color: var(--color-point);}
+#d06 .back{background-color: #709F68;}
 
 /***** 연락 *****/
 
