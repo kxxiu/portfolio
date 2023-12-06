@@ -43,6 +43,7 @@ $(document).ready(function(){
             }
           }, 10)
         });
+        
       }
     } else if(e.originalEvent.deltaY < 0){
       if(page == 2) return;
@@ -102,18 +103,20 @@ $(document).ready(function(){
       $('.gnb li:last-child span').removeClass('on');
     }
 
+    // 메인 컨텐츠
     // 프로필
     if(sPos >= 7){
     $('.img_box img').animate({'margin-top':'-7px'},500,'easeInOutCubic');
 
-    $('.profile_cont p').delay(550).animate({'opacity':'1','margin-top':'3%'},600,'easeOutQuad');
+    $('.profile_cont p').delay(550).animate({'opacity':'1','margin-top':'3%'},500,'easeOutQuad');
 
-    $('.profile_cont .line1').delay(1300).animate({'background-size':'100%'},300,function(){
+    $('.profile_cont .line1').delay(1200).animate({'background-size':'100%'},300,function(){
       $('.profile_cont .line2').delay(450).animate({'background-size':'100%'},300)
     })
 
-    $('.profile_cont > ul').delay(2700).animate({'opacity':'1','margin-top':'4%'},600);
+    $('.profile_cont > ul').delay(2500).animate({'opacity':'1','margin-top':'3%'},500);
     
+    // 성격
     let ch1 = $('.char li:first-child'); 
     let ch2 = $('.char li:nth-child(2)'); 
     let ch3 = $('.char li:nth-child(3)'); 
@@ -190,7 +193,7 @@ $(document).ready(function(){
       },1000,'easeInOutCirc')
     }
 
-    let charTimer = setInterval(charMove, 3200);
+    let charTimer = setInterval(charMove, 2500);
     }
 
     // 퍼블리싱 목차
@@ -239,21 +242,24 @@ $(document).ready(function(){
     }
 
     // P01 - 블랙핑크
-    if(sPos >= 19){
+    if(sPos >= 17){
       $('#p01 .pub_top').animate({'opacity':'1','top':'0'});
-    }
-    if(sPos >= 21){
-      $('#p01 .bg').delay(400).animate({'opacity':'1','top':'0'});
-      $('#p01 .pub_bottom span').delay(400).animate({'opacity':'1'},300,'easeInSine');
     }
 
     // P02 - 시장하시죠
-    if(sPos >= 26){}
+    if(sPos >= 22){
+      $('#p02 .pub_top').animate({'opacity':'1','top':'0'});
+    }
 
     // P03 - 죠스떡볶이
-    if(sPos >= 32){}
+    if(sPos >= 28){
+      $('#p03 .pub_top').animate({'opacity':'1','top':'0'});
+    }
 
     // P04 - 현대캐스퍼
+    if(sPos >= 34){
+      $('#p04 .pub_top').animate({'opacity':'1','top':'0'});
+    }
     if(sPos >= 38){
       $('#p04 .mockup img:last-child').addClass('img-scale');
     }else{
@@ -261,6 +267,9 @@ $(document).ready(function(){
     }
 
     // P05 - 아프리카 동물병원
+    if(sPos >= 41){
+      $('#p05 .pub_top').animate({'opacity':'1','top':'0'});
+    }
     if(sPos >= 45){
       $('#p05 .mockup img:first-child').animate({'opacity':'1','left':'22%'});
       $('#p05 .mockup img:last-child').delay(400).animate({'opacity':'1','right':'21%'},300);
@@ -270,6 +279,9 @@ $(document).ready(function(){
     let device = $('#p06 .mockup img:first-of-type');
     let tablet = $('#p06 .mockup img:last-of-type');
 
+    if(sPos >= 47){
+      $('#p06 .pub_top').animate({'opacity':'1','top':'0'});
+    }
     if(sPos >= 51){
       tablet.animate({'margin':'0'},500);
       function deviceOn(){

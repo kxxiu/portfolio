@@ -86,6 +86,7 @@ $(document).ready(function(){
     });
     $('.circle5').delay(1200).animate({'top':'45%'},1000,'easeOutCirc',function(){
       $(this).css('background','none').animate({'scale':'1'},500,'easeOutCubic');
+      // $('body').removeClass('prevent');
     });
   }
 
@@ -192,6 +193,23 @@ $(document).ready(function(){
   },function(){
     $(this).children().stop().css('transform','rotateY(0deg');
   });
+
+  //d05 - 애플워치 배경 
+  $('#d05 .btn').click(function(){
+    let modalImg = `
+    <div class="d05_img">
+      <img src="./images/d05_work.png">
+    </div>
+    `
+
+    $('#d05').append(modalImg);
+    $('.d05_img').animate({'opacity':'1'},100);
+    return false;
+  });
+
+  $('#d05 .card').mouseleave(function(){
+    $('.d05_img').fadeOut(100);
+  })
 
   // 컨텍트
   let call = $('#contact ul li:first-child a');

@@ -413,8 +413,8 @@
   justify-content: space-between;
   position: relative;
   padding: 3% 0 1% 0;
-  /* top: 4%;
-  opacity: 0; */
+  top: 4%;
+  opacity: 0;
 }
 .pub_title{margin-left: 5px;}
 .pub_title h3{
@@ -490,8 +490,6 @@
   transform: translateX(-50%);  
 }
 .pub_bottom > ul li{display: inline-block;}
-
-.mockup {/* display: none; */}
 
 /* 배경 */
 .bg{
@@ -812,47 +810,51 @@
 .design_box ul li{position: relative;}
 
 /* 뮤지엄고 */
-.d01{}
-.d01 .back{background-color: #6B5F4C;}
+#d01 .back{background-color: #6B5F4C;}
 
 /* 아이폰 */
-.d02{left: 69%;}
-.d02 .back{background-color: #B1C1CE;color: var(--color-bg);}
+#d02{left: 69%;}
+#d02 .back{background-color: #B1C1CE;color: var(--color-bg);}
 
 /* 뮤지엄고 로고 */
-.d03{left: 24%;}
-.d03 .back{background-color: #9A907F;}
-.d03 .back img{width: 50px;}
+#d03{left: 24%;}
+#d03 .back{background-color: #9A907F;}
+#d03 .back img{width: 50px;}
 
 /* 시장하시죠 로고 */
-.d04{left: 76%;}
-.d04 .back{background-color: #9CB6B0;color: var(--color-bg);}
+#d04{left: 76%;}
+#d04 .back{background-color: #9CB6B0;color: var(--color-bg);}
 
 /* 애플워치 배경 */
-.d05{left: 0;margin-top: -10%;}
-.d05 .back{background-color: #000;}
+#d05{left: 0;margin-top: -10%;}
+#d05 .back{background-color: #000;}
+.d05_img{
+  position: absolute;
+  top: 10%;left: 26%;
+  opacity: 0;
+}
 
 /* 배너 */
-.d06{left: 40%;}
-.d06 .front{
+#d06{left: 40%;}
+#d06 .front{
   background-color: var(--color-point);
   border-radius: 30px;
 }
-.d06 .front img{
+#d06 .front img{
   display: block;
   width: 120px;height: auto;
   margin: 50% auto 20px;
   border-radius: 0;
 }
-.d06 .front p{
+#d06 .front p{
   font-size: 20px;
   text-align: center;
 }
-.d06 span{
+#d06 span{
   display: block;
   padding-top: 210px;
 }
-.d06 .back{background-color: var(--color-point);}
+#d06 .back{background-color: var(--color-point);}
 
 /***** 연락 *****/
 

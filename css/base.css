@@ -41,6 +41,9 @@ body{
 }
 
 /* 공통 클래스 */
+.prevent{
+  overflow: hidden;
+}
 .hidden{
   display: block;
   width: 0;height: 0;
