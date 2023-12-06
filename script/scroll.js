@@ -21,10 +21,10 @@ $(document).ready(function(){
       function skill(){
         progressBar.each(function () {
           let $this = $(this);
-          let data = $this.attr('data');
+          let data = $this.find('span').text();
           let num = $this.children();
           let g = 0;
-          
+          console.log(data)
           let progress = setInterval(() => {
             g++;
 
