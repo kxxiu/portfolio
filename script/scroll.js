@@ -13,37 +13,31 @@ $(document).ready(function(){
     if(e.originalEvent.deltaY > 0){
       if(page >= 2) return;
       page++;
-
       if(page == 2){
 
-        // 프로필 - 기술 프로그레스 바
-        let progressBar = $('.progress_bar');
-        let progressNum = $('.progress_num');
-        let g = 0;
+      // 스킬
+      let progressBar = $('.progress_bar');
+      
+      function skill(){
+        progressBar.each(function () {
+          let $this = $(this);
+          let per = $this.attr('per');
+          let num = $this.children();
+          let g = 0;
+          
+          let progress = setInterval(() => {
+            g++;
 
-        let html = $('.skill li:first-of-type .progress_num').text();
-        // let css = $('.skill li:nth-of-type(2) .progress_num');
-        // let js = $('.skill li:nth-of-type(3) .progress_num');
-        // let jq = $('.skill li:nth-of-type(4) .progress_num');
-        // let ps = $('.skill li:nth-of-type(5) .progress_num');
-        // let ai = $('.skill li:nth-of-type(6) .progress_num');
-        // let fig = $('.skill li:nth-of-type(7) .progress_num');
-        // let plan = $('.skill li:first-of-type .progress_num');
-            
-        let progress = setInterval(() => {
-          g++;
-          progressNum.text(g + '%')
-          progressBar.css('background',`conic-gradient(#30302F ${3.6 * g}deg, transparent 0deg`)
-
-            $(progressNum).each(function(index, element) {
-            console.log($(this).text());
-            let io = $(this).text();
-            if(g == html){
+            if(g == per){
               clearInterval(progress);
             }
-          }, 10)
+            $this.css('background',`conic-gradient(#30302F ${3.6 * g}deg, transparent 0deg`);
+            num.text(g + '%');
+          }, 12)
         });
-        
+      }
+
+      let skillTimer = setTimeout(skill, 2500)
       }
     } else if(e.originalEvent.deltaY < 0){
       if(page == 2) return;
@@ -106,94 +100,94 @@ $(document).ready(function(){
     // 메인 컨텐츠
     // 프로필
     if(sPos >= 7){
-    $('.img_box img').animate({'margin-top':'-7px'},500,'easeInOutCubic');
+      $('.img_box img').animate({'margin-top':'-7px'},500,'easeInOutCubic');
 
-    $('.profile_cont p').delay(550).animate({'opacity':'1','margin-top':'3%'},500,'easeOutQuad');
+      $('.profile_cont p').delay(550).animate({'opacity':'1','margin-top':'3%'},500,'easeOutQuad');
 
-    $('.profile_cont .line1').delay(1200).animate({'background-size':'100%'},300,function(){
-      $('.profile_cont .line2').delay(450).animate({'background-size':'100%'},300)
-    })
+      $('.profile_cont .line1').delay(1200).animate({'background-size':'100%'},300,function(){
+        $('.profile_cont .line2').delay(450).animate({'background-size':'100%'},300)
+      })
 
-    $('.profile_cont > ul').delay(2500).animate({'opacity':'1','margin-top':'3%'},500);
-    
-    // 성격
-    let ch1 = $('.char li:first-child'); 
-    let ch2 = $('.char li:nth-child(2)'); 
-    let ch3 = $('.char li:nth-child(3)'); 
-    let ch4 = $('.char li:nth-child(4)');
-    let ch5 = $('.char li:nth-child(5)'); 
-    let ch6 = $('.char li:last-child'); 
-
-    function charMove(){
-      // 열정
-      ch1.delay(700).animate({
-        'left': '17px','top':'42px',
-        'width': '64px','line-height':'64px',
-        'font-size':'26px'
-      },1000,'easeInOutCirc').delay(1600).animate({
-        'left': '105px','top':'50px',
-        'width': '75px','line-height':'75px',
-        'font-size':'30px'
-      },1000,'easeInOutCirc')
-
-      // 친절
-      ch3.delay(700).animate({
-        'left': '174px','top':'17px',
-        'width': '54px','line-height':'54px',
-        'font-size':'20px'
-      },1000,'easeInOutCirc').delay(1600).animate({
-        'left': '17px','top':'42px',
-        'width': '64px','line-height':'64px',
-        'font-size':'26px'
-      },1000,'easeInOutCirc')
-
-      // 창의력
-      ch6.delay(700).animate({
-        'left': '105px','top':'50px',
-        'width': '75px','line-height':'75px',
-        'font-size':'26px'
-      },1000,'easeInOutCirc').delay(1600).animate({
-        'left': '174px','top':'17px',
-        'width': '54px','line-height':'54px',
-        'font-size':'17px'
-      },1000,'easeInOutCirc')
+      $('.profile_cont > ul').delay(2500).animate({'opacity':'1','margin-top':'3%'},500);
       
-      // 책임
-      ch2.delay(1800).animate({
-        'left': '57px','top':'104px',
-        'width': '50px','line-height':'50px',
-        'font-size':'18px'
-      },1000,'easeInOutCirc').delay(2600).animate({
-        'left': '180px','top':'90px',
-        'width': '65px','line-height':'65px',
-        'font-size':'20px'
-      },1000,'easeInOutCirc')
+      // 성격
+      let ch1 = $('.char li:first-child'); 
+      let ch2 = $('.char li:nth-child(2)'); 
+      let ch3 = $('.char li:nth-child(3)'); 
+      let ch4 = $('.char li:nth-child(4)');
+      let ch5 = $('.char li:nth-child(5)'); 
+      let ch6 = $('.char li:last-child'); 
 
-      // 배려
-      ch4.delay(1800).animate({
-        'left': '73px','top':'12px',
-        'width': '48px','line-height':'48px',
-        'font-size':'18px'
-      },1000,'easeInOutCirc').delay(2600).animate({
-        'left': '57px','top':'104px',
-        'width': '50px',
-        'line-height':'50px',
-        'font-size':'20px'
-      },1000,'easeInOutCirc')
-      
-      //성실
-      ch5.delay(1800).animate({
-        'left': '180px','top':'90px',
-        'width': '65px','line-height':'65px',
-        'font-size':'26px'
-      },1000,'easeInOutCirc').delay(2600).animate({
-        'left': '73px','top':'12px',
-        'width': '48px','line-height':'48px',
-        'font-size':'18px'
-      },1000,'easeInOutCirc')
-    }
+      function charMove(){
+        // 열정
+        ch1.delay(700).animate({
+          'left': '17px','top':'42px',
+          'width': '64px','line-height':'64px',
+          'font-size':'26px'
+        },1000,'easeInOutCirc').delay(1600).animate({
+          'left': '105px','top':'50px',
+          'width': '75px','line-height':'75px',
+          'font-size':'30px'
+        },1000,'easeInOutCirc')
 
-    let charTimer = setInterval(charMove, 2500);
+        // 친절
+        ch3.delay(700).animate({
+          'left': '174px','top':'17px',
+          'width': '54px','line-height':'54px',
+          'font-size':'20px'
+        },1000,'easeInOutCirc').delay(1600).animate({
+          'left': '17px','top':'42px',
+          'width': '64px','line-height':'64px',
+          'font-size':'26px'
+        },1000,'easeInOutCirc')
+
+        // 창의력
+        ch6.delay(700).animate({
+          'left': '105px','top':'50px',
+          'width': '75px','line-height':'75px',
+          'font-size':'26px'
+        },1000,'easeInOutCirc').delay(1600).animate({
+          'left': '174px','top':'17px',
+          'width': '54px','line-height':'54px',
+          'font-size':'17px'
+        },1000,'easeInOutCirc')
+        
+        // 책임
+        ch2.delay(1800).animate({
+          'left': '57px','top':'104px',
+          'width': '50px','line-height':'50px',
+          'font-size':'18px'
+        },1000,'easeInOutCirc').delay(2600).animate({
+          'left': '180px','top':'90px',
+          'width': '65px','line-height':'65px',
+          'font-size':'20px'
+        },1000,'easeInOutCirc')
+
+        // 배려
+        ch4.delay(1800).animate({
+          'left': '73px','top':'12px',
+          'width': '48px','line-height':'48px',
+          'font-size':'18px'
+        },1000,'easeInOutCirc').delay(2600).animate({
+          'left': '57px','top':'104px',
+          'width': '50px',
+          'line-height':'50px',
+          'font-size':'20px'
+        },1000,'easeInOutCirc')
+        
+        //성실
+        ch5.delay(1800).animate({
+          'left': '180px','top':'90px',
+          'width': '65px','line-height':'65px',
+          'font-size':'26px'
+        },1000,'easeInOutCirc').delay(2600).animate({
+          'left': '73px','top':'12px',
+          'width': '48px','line-height':'48px',
+          'font-size':'18px'
+        },1000,'easeInOutCirc')
+      }
+
+      let charTimer = setInterval(charMove, 2800);
     }
 
     // 퍼블리싱 목차
