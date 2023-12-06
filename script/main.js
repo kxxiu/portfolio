@@ -86,7 +86,6 @@ $(document).ready(function(){
     });
     $('.circle5').delay(1200).animate({'top':'45%'},1000,'easeOutCirc',function(){
       $(this).css('background','none').animate({'scale':'1'},500,'easeOutCubic');
-      // $('body').removeClass('prevent');
     });
   }
 
