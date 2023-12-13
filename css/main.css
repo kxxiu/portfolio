@@ -304,7 +304,14 @@
   border-radius: 50%;
   text-align: center;
 }
-.skill li span{
+.skill li > span {
+  display: inline-block;
+  transform: translateY(112px);
+  font-family: var(--font-eng);
+  font-size: 18px;
+  font-weight: 600;
+}
+.skill .progress_num span{
   display: none;
 }
 
